@@ -1,7 +1,5 @@
-import {Component} from 'react'
-
 import {Link, withRouter} from 'react-router-dom'
-
+import {Component} from 'react'
 import './index.css'
 
 class Header extends Component {
@@ -21,8 +19,6 @@ class Header extends Component {
     const homeClassName = path === '/' ? 'link-name highlight' : 'link-name'
     const aboutClassName =
       path === '/about' ? 'link-name highlight' : 'link-name'
-    const vaccinationClassName =
-      path === '/vaccination' ? 'link-name highlight' : 'link-name'
     return (
       <>
         <nav className="header-list">
@@ -38,15 +34,9 @@ class Header extends Component {
                 </button>
               </li>
             </Link>
-            <Link className="link-logo" to="/vaccination">
-              <li key="2">
-                <button type="button" className={vaccinationClassName}>
-                  Vaccination
-                </button>
-              </li>
-            </Link>
+
             <Link className="link-logo" to="/about">
-              <li key="3">
+              <li key="2">
                 <button type="button" className={aboutClassName}>
                   About
                 </button>
@@ -59,7 +49,7 @@ class Header extends Component {
             onClick={this.toggleMenu}
           >
             <img
-              src="https://res.cloudinary.com/dyhsyterg/image/upload/v1643368210/add-to-queue_1_lrcjeu.png"
+              src="https://res.cloudinary.com/dvosw6fkt/image/upload/v1662780401/hamberger_pz0cua.svg"
               alt="menu item"
               className="menu-image"
             />
@@ -74,28 +64,21 @@ class Header extends Component {
                 </button>
               </li>
             </Link>
-            <Link className="link-item" to="/vaccination">
-              <li key="2">
-                <button type="button" className={vaccinationClassName}>
-                  Vaccination
-                </button>
-              </li>
-            </Link>
             <Link className="link-item" to="/about">
-              <li key="3">
+              <li key="2">
                 <button type="button" className={aboutClassName}>
                   About
                 </button>
               </li>
             </Link>
-            <li className="close-item" key="3">
+            <li className="close-item" key="2">
               <button
                 type="button"
                 className="close-button"
                 onClick={this.closeMenu}
               >
                 <img
-                  src="https://res.cloudinary.com/dyhsyterg/image/upload/v1643369220/Shape_hewlfb.png"
+                  src="https://res.cloudinary.com/dvosw6fkt/image/upload/v1662780761/close_yojsls.svg"
                   alt="close icon"
                   className="close-icon"
                 />
